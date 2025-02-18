@@ -98,4 +98,4 @@ Would love to hear your thoughts and suggestions! Feel free to contribute or mod
 
 ---
 
-🔗 **#ShivajiMaharajJayanti #Java #OpenCV #ASCIIArt #Coding #TechForHistory**
+🔗 **#ChhatrapatiShivajiMaharajJayanti #Java #OpenCV #ASCIIArt #Coding #TechForHistory**
