@@ -7,41 +7,38 @@ import org.opencv.videoio.VideoCapture;
 import java.io.File;
 
 public class VideoToAscii {
-
     public static void main(String[] args) throws InterruptedException {
-        // Load the OpenCV native library
+        // Load OpenCV library
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 
         // Initialize video capture
         String videoPath = new File("video8.mp4").getAbsolutePath();
-
-        // Update with your video path
         VideoCapture video = new VideoCapture(videoPath);
+
         if (!video.isOpened()) {
             System.out.println("Error: Cannot open video file.");
             return;
         }
 
-        // Get the video frame rate (frames per second)
-        double frameRate = video.get(5); // 5 is the index for FPS in OpenCV
+        // Get the video frame rate
+        double frameRate = video.get(5); // Index 5 retrieves FPS in OpenCV
         System.out.println("Frame Rate: " + frameRate);
 
         Mat frame = new Mat();
         int scale = 6; // Adjust for ASCII resolution (higher = lower quality)
         String asciiChars = "@#%*+=-:. "; // ASCII brightness scale
 
-        // Continuous loop to process video frames
+        // Process video frames
         while (true) {
-            boolean isFrameRead = video.read(frame);  // Read the next frame from video
+            boolean isFrameRead = video.read(frame); // Read next frame
 
             if (!isFrameRead) {
                 System.out.println("End of video reached.");
-                break; // Exit the loop when the video reaches the end
+                break; // Exit loop when the video ends
             }
 
-            // Resize frame for ASCII resolution
+            // Resize frame
             Imgproc.resize(frame, frame, new Size(frame.cols() / scale, frame.rows() / scale));
-
             // Convert to grayscale
             Imgproc.cvtColor(frame, frame, Imgproc.COLOR_BGR2GRAY);
 
@@ -56,15 +53,17 @@ public class VideoToAscii {
                 asciiArt.append("\n");
             }
 
-            // Print the ASCII art (overwrite the previous line in the console)
+            // Clear the console and print ASCII art
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
             System.out.print(asciiArt.toString());
 
-            // Release the memory for the current frame after processing
+            // Release the frame after processing
             frame.release();
 
-            // Calculate delay time for real-time playback (in milliseconds)
-            int delay = (int) (1000 / frameRate); // Delay in ms to match frame rate
-            Thread.sleep(delay); // Wait for the next frame
+            // Delay for real-time playback
+            int delay = Math.max(50, (int) (1000 / frameRate)); // Ensures at least 50ms delay
+            Thread.sleep(delay);
         }
 
         // Release video capture
