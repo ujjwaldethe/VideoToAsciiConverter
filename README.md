@@ -1,9 +1,3 @@
-Here's a combined `README.md` file for both your Java programs:  
-
-1. **VideoToAscii**: Converts a video into ASCII animation using OpenCV.  
-2. **ImageToConsole**: Displays an image as ASCII art with color effects in the console.  
-
----
 
 # 🎨 Video & Image to ASCII Converter  
 
@@ -98,4 +92,4 @@ Would love to hear your thoughts and suggestions! Feel free to contribute or mod
 
 ---
 
-🔗 **#ShivajiMaharajJayanti #Java #OpenCV #ASCIIArt #Coding #TechForHistory**
+🔗 **#ChhatrapatiShivajiMaharajJayanti #Java #OpenCV #ASCIIArt #Coding #TechForHistory**
