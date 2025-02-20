@@ -5,68 +5,92 @@ import org.opencv.imgproc.Imgproc;
 import org.opencv.videoio.VideoCapture;
 
 import java.io.File;
-
+import java.io.IOException;
+import java.util.Scanner;
+//U Need To Manually Stop Music Using Cmd : taskkill /IM ffplay.exe /F
+//It Will Be Fixed In Next Update
 public class VideoToAscii {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, IOException {
         // Load OpenCV library
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 
-        // Initialize video capture
-        String videoPath = new File("video8.mp4").getAbsolutePath();
-        VideoCapture video = new VideoCapture(videoPath);
+        Scanner scanner = new Scanner(System.in);
 
-        if (!video.isOpened()) {
-            System.out.println("Error: Cannot open video file.");
-            return;
-        }
+        System.out.println("Enter Path : ");
+        String videoPath = scanner.nextLine().trim().replaceAll("^\"|\"$", ""); // Remove surrounding quotes
+        videoPath = new File(videoPath).getAbsolutePath();
 
-        // Get the video frame rate
-        double frameRate = video.get(5); // Index 5 retrieves FPS in OpenCV
-        System.out.println("Frame Rate: " + frameRate);
+        System.out.println("Enter how many times you want to play the video (0 for infinite): ");
+        int loopCount = scanner.nextInt();
 
-        Mat frame = new Mat();
-        int scale = 6; // Adjust for ASCII resolution (higher = lower quality)
-        String asciiChars = "@#%*+=-:. "; // ASCII brightness scale
+        int playCount = 0;
 
-        // Process video frames
-        while (true) {
-            boolean isFrameRead = video.read(frame); // Read next frame
+        while (loopCount == 0 || playCount < loopCount) {
+            // Start playing audio in a separate process
+            ProcessBuilder processBuilder = new ProcessBuilder(
+                    "ffplay", "-nodisp", "-autoexit", videoPath);
+            processBuilder.redirectErrorStream(true);
+            Process audioProcess = processBuilder.start();
 
-            if (!isFrameRead) {
-                System.out.println("End of video reached.");
-                break; // Exit loop when the video ends
+            VideoCapture video = new VideoCapture(videoPath);
+            if (!video.isOpened()) {
+                System.out.println("Error: Cannot open video file.");
+                return;
             }
 
-            // Resize frame
-            Imgproc.resize(frame, frame, new Size(frame.cols() / scale, frame.rows() / scale));
-            // Convert to grayscale
-            Imgproc.cvtColor(frame, frame, Imgproc.COLOR_BGR2GRAY);
+            double frameRate = video.get(5);
+            double frameTime = 1000.0 / frameRate; // Time per frame in ms
+            long videoStartTime = System.currentTimeMillis();
 
-            // Convert frame to ASCII
-            StringBuilder asciiArt = new StringBuilder();
-            for (int y = 0; y < frame.rows(); y++) {
-                for (int x = 0; x < frame.cols(); x++) {
-                    int pixelValue = (int) frame.get(y, x)[0]; // Grayscale pixel value
-                    int index = (pixelValue * (asciiChars.length() - 1)) / 255;
-                    asciiArt.append(asciiChars.charAt(index)).append(" ");
+            System.out.println("Frame Rate: " + frameRate);
+
+            Mat frame = new Mat();
+            int scale = 6; // Adjust for ASCII resolution
+            String asciiChars = "@#%*+=-:. "; // ASCII brightness scale
+
+            while (true) {
+                boolean isFrameRead = video.read(frame);
+                if (!isFrameRead) {
+                    break;
                 }
-                asciiArt.append("\n");
+
+                Imgproc.resize(frame, frame, new Size(frame.cols() / scale, frame.rows() / scale));
+                Imgproc.cvtColor(frame, frame, Imgproc.COLOR_BGR2GRAY);
+
+                StringBuilder asciiArt = new StringBuilder();
+                for (int y = 0; y < frame.rows(); y++) {
+                    for (int x = 0; x < frame.cols(); x++) {
+                        int pixelValue = (int) frame.get(y, x)[0];
+                        int index = (pixelValue * (asciiChars.length() - 1)) / 255;
+                        asciiArt.append(asciiChars.charAt(index)).append(" ");
+                    }
+                    asciiArt.append("\n");
+                }
+
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
+                System.out.print(asciiArt.toString());
+
+                frame.release();
+
+                // Ensure proper frame timing
+                long elapsedTime = System.currentTimeMillis() - videoStartTime;
+                long expectedTime = (long) ((video.get(1) / frameRate) * 1000);
+                long sleepTime = Math.max(0, expectedTime - elapsedTime);
+                Thread.sleep(sleepTime);
             }
 
-            // Clear the console and print ASCII art
-            System.out.print("\033[H\033[2J");
-            System.out.flush();
-            System.out.print(asciiArt.toString());
+            video.release();
+            playCount++;
 
-            // Release the frame after processing
-            frame.release();
+            // Ensure the audio process is properly terminated
+            if (audioProcess != null && audioProcess.isAlive()) {
+                audioProcess.destroy();
+            }
 
-            // Delay for real-time playback
-            int delay = Math.max(50, (int) (1000 / frameRate)); // Ensures at least 50ms delay
-            Thread.sleep(delay);
+            if (loopCount > 0 && playCount >= loopCount) {
+                break;
+            }
         }
-
-        // Release video capture
-        video.release();
     }
 }

@@ -5,8 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d59aa80-be37-4ff8-a0e7-8ff9f5bf36a9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/community.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/developer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/faq.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/fate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/ffmpeg-all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/ffmpeg-bitstream-filters.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/ffmpeg-codecs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/ffmpeg-devices.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/ffmpeg-filters.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/ffmpeg-formats.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/ffmpeg-protocols.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/ffmpeg-resampler.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/ffmpeg-scaler.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/ffmpeg-utils.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/ffmpeg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/ffplay-all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/ffplay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/ffprobe-all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/ffprobe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/general.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/git-howto.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/libavcodec.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/libavdevice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/libavfilter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/libavformat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/libavutil.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/libswresample.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/libswscale.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/mailing-list-faq.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/nut.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/platform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/doc/style.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/presets/libvpx-1080p.ffpreset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/presets/libvpx-1080p50_60.ffpreset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/presets/libvpx-360p.ffpreset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/presets/libvpx-720p.ffpreset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ffmpeg-7.1-full_build/ffmpeg-7.1-full_build/presets/libvpx-720p50_60.ffpreset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VideoToAsciiConverter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/VideoToAsciiConverter.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VideoToAscii.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VideoToAscii.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,20 +85,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ImageToConsole.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/krish/Downloads/openjfx-22.0.2_windows-x64_bin-sdk/javafx-sdk-22.0.2/lib/javafx-swt.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ImageToConsole.executor": "Run",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/krish/IdeaProjects/VideoToAsciiConverter/lib",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\krish\IdeaProjects\VideoToAsciiConverter\lib" />
+      <recent name="C:\Users\krish\IdeaProjects\VideoToAsciiConverter\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\krish\IdeaProjects\VideoToAsciiConverter\lib" />
     </key>
@@ -94,11 +138,20 @@
       <option name="project" value="LOCAL" />
       <updated>1739904781771</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fluctuations Removed And Resize Console Printing.">
+      <option name="closed" value="true" />
+      <created>1740079178119</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740079178119</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Image To Console" />
-    <option name="LAST_COMMIT_MESSAGE" value="Image To Console" />
+    <MESSAGE value="Fluctuations Removed And Resize Console Printing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fluctuations Removed And Resize Console Printing." />
   </component>
 </project>
