@@ -3,12 +3,12 @@ import org.opencv.core.Mat;
 import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.videoio.VideoCapture;
-
+//U Need To Manually Stop Music Using Cmd : taskkill /IM ffplay.exe /F
+//It Will Be Fixed In Next Update
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
-//U Need To Manually Stop Music Using Cmd : taskkill /IM ffplay.exe /F
-//It Will Be Fixed In Next Update
+
 public class VideoToAscii {
     public static void main(String[] args) throws InterruptedException, IOException {
         // Load OpenCV library
